@@ -208,6 +208,17 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+document.addEventListener('keyup', (e) => {
+    if (e.key === 'ArrowRight') {
+        paddleDX = 0; // Zaustavi pomicanje udesno
+        isMovingRight = false;
+    }
+    if (e.key === 'ArrowLeft') {
+        paddleDX = 0; // Zaustavi pomicanje ulijevo
+        isMovingLeft = false;
+    }
+});
+
 
 createBricks();
 draw();
